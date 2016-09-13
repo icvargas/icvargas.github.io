@@ -474,8 +474,7 @@ footer[role="contentinfo"] {
     margin: 0 auto;
 }
 
-
-.banner h1{
+.banner h1 {
     font-size: 2em;
     color: #fff;
 }
@@ -709,5 +708,14 @@ footer[role="contentinfo"] {
         -ms-transform: translate3d(0, 0, 0);
         -o-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
+    }
+    .banner h1 {
+        font-size: 1.5em;
+        color: #fff;
+    }
+    .banner .text {
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 40px;
     }
 }
