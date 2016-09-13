@@ -462,8 +462,66 @@ footer[role="contentinfo"] {
     background: #808080;
 }
 
-.rigth{
+.rigth {
     text-align: right
+}
+
+.banner {
+    position: relative;
+    background-color: #23B5AF;
+    height: 200px;
+    max-width: 60em;
+    margin: 0 auto;
+}
+
+
+.banner h1{
+    font-size: 2em;
+    color: #fff;
+}
+
+.banner .text {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 40px;
+}
+
+.diamond {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .1);
+    width: 34%;
+    height: 200px;
+    right: 0;
+    -moz-transition: width 2s;
+    -o-transition: width 2s;
+    -webkit-transition: width 2s;
+    transition: width 2s;
+}
+
+.diamond:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: -100px;
+    border-right: 100px solid rgba(0, 0, 0, .1);
+    border-bottom: 100px solid rgba(0, 0, 0, 0);
+}
+
+.diamond div:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: -100px;
+    border-right: 100px solid rgba(0, 0, 0, .1);
+    border-top: 100px solid rgba(0, 0, 0, 0);
+}
+
+.banner:hover .diamond {
+    width: 15%;
 }
 
 @media screen and (min-width: 45.0625em) {
