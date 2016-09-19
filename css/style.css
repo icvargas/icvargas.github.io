@@ -1,3 +1,7 @@
+/*
+Author: Ivan Vargas
+*/
+
 @charset "UTF-8";
 @-ms-viewport {
     width: device-width;
@@ -278,18 +282,19 @@ body {
     margin-bottom: 0.5em;
 }
 
-.prose a {
+
+/*.prose a {
     color: #6d7173;
     border-bottom: 1px solid #a1cfe5;
     text-decoration: none;
     outline: none;
-}
+
 
 .prose a:focus,
 .prose a:hover {
     color: #4ab336;
     border-bottom-color: #77b36b;
-}
+}*/
 
 .block {
     position: relative;
@@ -523,6 +528,292 @@ footer[role="contentinfo"] {
     width: 15%;
 }
 
+.container {
+    position: relative;
+    width: 70em;
+    margin: 0 auto;
+    color: #444;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: Roboto, 'Open Sans', Arial, sans-serif;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+/* 
+  Columns 
+*/
+
+.col {
+    float: left;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.col.four {
+    width: 23%;
+    margin: 0 1%;
+}
+
+.col.three {
+    width: 31.3%;
+    margin: 0 1%;
+}
+
+.col.two {
+    width: 40%;
+    margin: 0 2.5%;
+    padding: 0 2.5%;
+}
+
+.col.extrapad {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.col .service,
+.col .feature {
+    font-size: 21px;
+    font-weight: 300;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.col .service:after {
+    content: "";
+    width: 50px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.col .feature {
+    font-size: 19px;
+}
+
+.col h1.side,
+.col p.side,
+.col span.side:first-of-type {
+    margin-left: 50px;
+    text-align: left;
+}
+
+.col .icon {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    line-height: 85px;
+    text-align: center;
+    margin: 0 auto;
+    transition: background 0.25s linear, color 0.25s linear;
+    color: white;
+    background: #3b3b3b;
+}
+
+.col .icon.side {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: -15px;
+    height: 50px;
+    width: 50px;
+}
+
+.col:hover > .icon {
+    color: white;
+}
+
+.col:hover > .icon.side {
+    background: initial;
+    color: initial;
+}
+
+.responsivegroup {
+    display: none;
+}
+
+
+/* Rules for sizing the icon. */
+
+.material-icons.md-18 {
+    font-size: 18px;
+    line-height: 2.5em;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+    line-height: 2.5em;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+    line-height: 2.5em;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+    line-height: 2.5em;
+}
+
+
+/* Rules for using icons as black on a light background. */
+
+.material-icons.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+
+/* Rules for using icons as white on a dark background. */
+
+.material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
+/*
+  Column specifics
+*/
+
+.col p,
+.col h1 {
+    padding: 0 1%;
+    text-align: center;
+}
+
+.group.margin {
+    margin-bottom: 20px;
+}
+
+.col .imgholder {
+    height: 300px;
+    width: 100%;
+    background: #333;
+    transition: background 0.3s linear;
+}
+
+.col.bg {
+    background: #FFF;
+}
+
+.col.pointer {
+    cursor: pointer;
+}
+
+.col.bg:hover .imgholder {
+    background: #555;
+}
+
+.col span.feature {
+    font-size: 20px;
+}
+
+
+/*
+  Text
+*/
+
+.container > h1:not(.hero) {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.container > h1:after {
+    content: "";
+    width: 30px;
+    position: relative;
+    border-bottom: 1px solid #aaa;
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+}
+
+h2 {
+    font-family: 'Roboto Slab', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.left,
+.left > h1,
+.left > p {
+    text-align: left;
+}
+
+.reset {
+    text-align: left !important;
+}
+
+.reset:after {
+    display: none !important;
+}
+
+
+/* Button 1 */
+.btn {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 auto 2em;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.btn-1 {
+  background: #006680;
+  font-weight: 100;
+}
+.btn-1 svg {
+  height: 45px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.btn-1 rect {
+  fill: none;
+  stroke: #006680;
+  stroke-width: 2;
+  stroke-dasharray: 422, 0;
+}
+
+.btn-1:hover {
+  background: rgba(225, 51, 45, 0);
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #006680; 
+}
+.btn-1:hover rect {
+  stroke-width: 5;
+  stroke-dasharray: 15, 310;
+  stroke-dashoffset: 48;
+  -webkit-transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
+/*Medias*/
+
 @media screen and (min-width: 45.0625em) {
     #top .nav-btn {
         border: 0;
@@ -717,5 +1008,19 @@ footer[role="contentinfo"] {
         position: absolute;
         margin-top: 50px;
         margin-left: 40px;
+    }
+    .container {
+        width: 95%;
+    }
+    .col.four {
+        width: 48%;
+        margin: 1%;
+    }
+    .col.three {
+        display: block;
+        width: 95%;
+        padding: 0;
+        margin: 0 auto;
+        float: none;
     }
 }
